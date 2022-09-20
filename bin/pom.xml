@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.2</version>
-		<relativePath /> <!-- lookup parent from repository -->
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sunera.tracfone</groupId>
 	<artifactId>tracfone-kt-statusMS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>tracfone-kt-statusMS</name>
-	<description>Tracfone KT Status Microservice to maintain KT status
-		information</description>
+	<description>Tracfone KT Status Microservice to maintain KT status information</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -35,38 +30,28 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
+		        <exclusion>
+		            <groupId>org.junit.vintage</groupId>
+		            <artifactId>junit-vintage-engine</artifactId>
+		        </exclusion>
+   			  </exclusions>
 		</dependency>
-
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.14.3</version>
-			<scope>test</scope>
-		</dependency>
-
-
+		
 		<!-- H2 database config -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
-		<!-- its elemenate setter, getter, constructors, toStrong ect.. methods 
-			cration in any of the bean -->
+		
+		<!-- its elemenate setter, getter, constructors, toStrong ect.. methods cration in any of the bean -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-
-		<!-- This dependency is used for auto-restart of server at the time of 
-			development -->
+		
+		<!-- This dependency is used for auto-restart of server at the time of development -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -89,36 +74,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.2</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<!-- attached to Maven test phase -->
-					<execution>
-						<id>jacoco-report</id>
-						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-						<!-- default target/site/jacoco/* you can define your directory for 
-							code coverage report -->
-						<configuration>
-							<outputDirectory>target/jacoco-report</outputDirectory>
-							<skip>${jacoco.skip}</skip>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
+
 </project>
-
-	
-
-	

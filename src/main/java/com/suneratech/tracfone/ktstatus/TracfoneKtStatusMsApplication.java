@@ -9,5 +9,4 @@ public class TracfoneKtStatusMsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TracfoneKtStatusMsApplication.class, args);
 	}
-
 }
